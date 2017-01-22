@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login"
+    tools:context="com.example.apputil.MainActivity">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#b4000000" />
+
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_heightPercent="8%"
+        app:layout_marginLeftPercent="10%"
+        app:layout_marginTopPercent="35%"
+        app:layout_widthPercent="80%">
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="账号："
+            android:textColor="#cc0d0d" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:hint="请输入账号"
+            android:padding="5dp"
+            android:textColorHint="#61605f" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/layout1"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        app:layout_heightPercent="8%"
+        app:layout_widthPercent="80%">
+
+        <TextView
+            android:id="@+id/tvPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="密码："
+            android:textColor="#cc0d0d" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:textColorHint="#61605f" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/layout2"
+        android:layout_centerInParent="true"
+        android:background="@drawable/login_button_shape"
+        android:text="登陆"
+        android:textColor="#ffffff"
+        app:layout_heightPercent="8%"
+        app:layout_marginTopPercent="10%"
+        app:layout_widthPercent="80%" />
+
+    <Button
+        android:id="@+id/btRegister"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/btLogin"
+        android:layout_centerInParent="true"
+        android:background="@drawable/login_register_button_shape"
+        android:text="注册"
+        android:textColor="#11a986"
+        app:layout_heightPercent="8%"
+        app:layout_marginTopPercent="5%"
+        app:layout_widthPercent="80%" />
+
+
+</android.support.percent.PercentRelativeLayout>
+
+

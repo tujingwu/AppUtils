@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 自定义CircleImageView圆形imageView自定义属性 -->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <!-- 自定义RoundImageView圆角图片的自定义属性 -->
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+
+    <!--流式布局自定义属性  lineSpacing：每行之间的间距 maxLine:最大-->
+    <declare-styleable name="FlowLayout">
+        <attr name="lineSpacing" format="dimension" />
+        <attr name="maxLine" format="integer" />
+    </declare-styleable>
+
+    <!--自定义消息红点的自定义属性-->
+    <declare-styleable name="BadgeView">
+        <attr name="badge_padding_top" format="dimension" />
+        <attr name="badge_padding_right" format="dimension" />
+        <attr name="badge_count" format="string" />
+        <attr name="badge_none_show" format="boolean" />
+        <attr name="badge_color" format="color" />
+    </declare-styleable>
+
+
+    <!-- 用于自定义radioButotnl图片大小 -->
+    <declare-styleable name="MyRadioButton">
+        <attr name="drawableSize" format="dimension"/>
+        <attr name="drawableTop" format="reference"/>
+        <attr name="drawableLeft" format="reference"/>
+        <attr name="drawableRight" format="reference"/>
+        <attr name="drawableBottom" format="reference"/>
+    </declare-styleable>
+</resources>

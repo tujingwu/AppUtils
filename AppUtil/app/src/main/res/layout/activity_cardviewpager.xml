@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--clipChildren属性表示是否限制子控件在该容器所在的范围内，
+clipChildren属性配合layout_gravity属性，
+可以用来设置多余部分的显示位置-->
+<!--style是设置状态栏的沉浸式样式-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAppBar"
+    style="@style/BarTintStyle"
+    android:clipChildren="false"
+    tools:context="com.example.apputil.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:clipChildren="false" />
+
+</RelativeLayout>

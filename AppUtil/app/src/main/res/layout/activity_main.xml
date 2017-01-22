@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--style是设置状态栏的沉浸式样式-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BarTintStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.apputil.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/mainbar_layout"
+        style="@style/AppBarStyle">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="AppBar"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/slide_drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mainbar_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btDailog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="弹出dialog" />
+
+                <Button
+                    android:id="@+id/btCancelLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退出登陆" />
+
+                <Button
+                    android:id="@+id/btNotify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="通知工具类" />
+
+                <Button
+                    android:id="@+id/btAlbum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="相册" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btRefresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下拉刷新上拉加载" />
+
+                <Button
+                    android:id="@+id/btSlideDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="侧滑" />
+
+                <Button
+                    android:id="@+id/btCustomViewPager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="垂直卡片viewpager" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btCardViePager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="左右滑动卡片viewpager" />
+
+                <Button
+                    android:id="@+id/btFlowLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="流式布局" />
+
+                <Button
+                    android:id="@+id/btBadegeview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="消息红点" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout3"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btExpandListview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2级列表ExpandAblelistview" />
+
+                <Button
+                    android:id="@+id/btKeyBoard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="聊天表情键盘" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout4"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btBottomTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="底部栏tab" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+        <!--抽屉-->
+        <include
+            layout="@layout/drawerlayout_include"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

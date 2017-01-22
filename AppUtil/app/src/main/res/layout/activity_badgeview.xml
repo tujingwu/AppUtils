@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="USE:"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#eeeeee"
+            android:padding="10dp"
+            android:text="Tab1:\nBadgeTextView.\nsetBadgeCount(0).\nsetBadgeShown(true);"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#eeeeee"
+            android:padding="10dp"
+            android:text="Tab2:\nBadgeTextView.\nsetBadgeCount(87);"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="#eeeeee"
+            android:padding="10dp"
+            android:text="Tab3:\nBadgeTextView.\nsetBadgeCount(1).\nsetColor(Color.parse(#20A6EF));"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp">
+
+        <com.example.apputil.customview.badgeview.BadgeTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:gravity="center"
+            android:text="Hello World"
+            app:badge_none_show="true"
+            app:badge_count="1"
+            app:badge_padding_right="20dp" />
+
+
+        <com.example.apputil.customview.badgeview.BadgeTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:gravity="center"
+            android:text="Hello World"
+            app:badge_count="87"
+            app:badge_padding_right="20dp" />
+
+
+        <com.example.apputil.customview.badgeview.BadgeTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:gravity="center"
+            android:text="Hello World"
+            app:badge_color="#20A6EF"
+            app:badge_count="1"
+            app:badge_none_show="true"
+            app:badge_padding_right="20dp"
+            app:badge_padding_top="20dp" />
+
+        <com.example.apputil.customview.badgeview.BadgeRadioButtom
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/ic_launcher"
+            app:badge_color="#20A6EF"
+            app:badge_count="333"
+            app:badge_none_show="true"
+            app:badge_padding_right="20dp"
+            app:badge_padding_top="5dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

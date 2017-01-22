@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+android {
+    compileSdkVersion 22
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        applicationId "com.example.apputil"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    //引导界面动画
+    compile 'com.nineoldandroids:library:2.4.0'
+    //引导界面
+    compile 'cn.bingoogolapple:bga-banner:2.0.9@aar'
+    //百分比布局库
+    compile 'com.android.support:percent:22.2.0'
+    //黄油刀
+    compile 'com.jakewharton:butterknife:7.0.1'
+    //沉浸式状态栏
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    //-------------------Retrofit----------
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    //retrofit转换成字符串的依赖
+    compile 'com.squareup.retrofit2:converter-scalars:2.0.0'
+    //retrofit转换成java bean的依赖
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    //Rxjava适配Retrofit库和RxAndroid库
+    compile 'io.reactivex:rxjava:1.0.14'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
+    //-------------------------------------
+    //okgo网络请求框架
+    compile 'com.lzy.net:okgo:2.1.4'
+    //可以单独使用，不需要依赖下方的扩展包
+    compile 'com.lzy.net:okrx:0.1.2'
+    //RxJava扩展支持，根据需要添加
+    //------------------------------------
+    //刷新
+    compile 'com.chanven.lib:cptr:1.1.0'
+    //本地相册依赖壳
+    compile project(':imgselectlibrary')
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //侧滑删除等(支持ListView, GridView, ViewGroup,recyclerview等等左右上下滑动出操作菜单)
+    compile 'com.daimajia.swipelayout:library:1.2.0@aar'
+    //图片手势缩放
+
+
+    //emj表情键盘
+    compile 'com.github.w446108264:AndroidEmoji:1.0.0'
+    compile project(':keybroadlibrary')
+}
